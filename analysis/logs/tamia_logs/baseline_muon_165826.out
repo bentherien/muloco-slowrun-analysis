@@ -1,0 +1,114 @@
+=== Job 165826 on tg11506.tamia.ecpia.ca ===
+Start: Thu Feb 26 03:11:07 PM EST 2026
+GPU 0: NVIDIA H200 (UUID: GPU-89392f51-22d9-33ae-5296-09927e820747)
+GPU 1: NVIDIA H200 (UUID: GPU-415d1358-c334-e88f-783e-ab3d6beed31f)
+GPU 2: NVIDIA H200 (UUID: GPU-55bb9c33-8185-6cdd-a9a9-a857e890f532)
+GPU 3: NVIDIA H200 (UUID: GPU-16d5faab-5212-040e-d94a-0554c93cef2f)
+GPU 4: NVIDIA H200 (UUID: GPU-a0cc84fb-3fff-576c-b9c8-c19ce7962e1d)
+GPU 5: NVIDIA H200 (UUID: GPU-154d0918-52b8-b358-0e4f-e729af32a187)
+GPU 6: NVIDIA H200 (UUID: GPU-34196b35-5554-4d29-b584-81d9e637c83c)
+GPU 7: NVIDIA H200 (UUID: GPU-21026c8b-7c30-1884-b13f-566e4a4fb80c)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/markdown_it_py-4.0.0+computecanada-py3-none-any.whl (from rich>=12.3.0->typer>=0.24.0->typer-slim->huggingface-hub<2.0,>=0.25.0->datasets)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/pygments-2.19.2+computecanada-py3-none-any.whl (from rich>=12.3.0->typer>=0.24.0->typer-slim->huggingface-hub<2.0,>=0.25.0->datasets)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/mdurl-0.1.2+computecanada-py3-none-any.whl (from markdown-it-py>=2.2.0->rich>=12.3.0->typer>=0.24.0->typer-slim->huggingface-hub<2.0,>=0.25.0->datasets)
+Installing collected packages: mpmath, xxhash, triton, tqdm, sympy, shellingham, regex, python-dateutil, pygments, propcache, numpy, networkx, multidict, mdurl, MarkupSafe, hf-xet, h11, fsspec, frozenlist, dill, attrs, anyio, annotated-doc, aiohappyeyeballs, yarl, tiktoken, pandas, multiprocess, markdown-it-py, jinja2, httpcore, aiosignal, torch, rich, httpx, aiohttp, typer, typer-slim, huggingface-hub, datasets
+Successfully installed MarkupSafe-3.0.3+computecanada aiohappyeyeballs-2.6.1+computecanada aiohttp-3.13.3+computecanada aiosignal-1.4.0+computecanada annotated-doc-0.0.4+computecanada anyio-4.12.1+computecanada attrs-25.4.0+computecanada datasets-4.5.0+computecanada dill-0.4.0+computecanada frozenlist-1.8.0+computecanada fsspec-2025.10.0+computecanada h11-0.16.0+computecanada hf-xet-1.2.0+computecanada httpcore-1.0.9+computecanada httpx-0.28.1+computecanada huggingface-hub-1.4.1+computecanada jinja2-3.1.6+computecanada markdown-it-py-4.0.0+computecanada mdurl-0.1.2+computecanada mpmath-1.3.0+computecanada multidict-6.7.1+computecanada multiprocess-0.70.18+computecanada networkx-3.6.1+computecanada numpy-2.4.2+computecanada pandas-3.0.0+computecanada propcache-0.4.1+computecanada pygments-2.19.2+computecanada python-dateutil-2.9.0.post0+computecanada regex-2026.1.15+computecanada rich-14.3.3+computecanada shellingham-1.5.4+computecanada sympy-1.14.0+computecanada tiktoken-0.12.0+computecanada torch-2.10.0+computecanada tqdm-4.67.3+computecanada triton-3.6.0+computecanada typer-0.24.1+computecanada typer-slim-0.24.0+computecanada xxhash-3.5.0+computecanada yarl-1.22.0+computecanada
+slurmstepd: error: *** JOB 165826 ON tg11506 CANCELLED AT 2026-02-26T20:12:49 ***
+
+======== GPU REPORT ========
+
+==============NVSMI LOG==============
+
+Timestamp                                 : Thu Feb 26 15:12:50 2026
+Driver Version                            : 570.211.01
+CUDA Version                              : 12.8
+
+Attached GPUs                             : 8
+GPU 00000000:19:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes                   : None
+
+GPU 00000000:3B:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes                   : None
+
+GPU 00000000:4C:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes                   : None
+
+GPU 00000000:5D:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes                   : None
+
+GPU 00000000:9B:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes                   : None
+
+GPU 00000000:BB:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes                   : None
+
+GPU 00000000:CB:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes                   : None
+
+GPU 00000000:DB:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes                   : None
+
+Thu Feb 26 15:12:50 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.211.01             Driver Version: 570.211.01     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H200                    On  |   00000000:19:00.0 Off |                    0 |
+| N/A   38C    P0             80W /  700W |       4MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA H200                    On  |   00000000:3B:00.0 Off |                    0 |
+| N/A   34C    P0             78W /  700W |       4MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA H200                    On  |   00000000:4C:00.0 Off |                    0 |
+| N/A   33C    P0             76W /  700W |       4MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA H200                    On  |   00000000:5D:00.0 Off |                    0 |
+| N/A   37C    P0             78W /  700W |       4MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   4  NVIDIA H200                    On  |   00000000:9B:00.0 Off |                    0 |
+| N/A   38C    P0             79W /  700W |       4MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   5  NVIDIA H200                    On  |   00000000:BB:00.0 Off |                    0 |
+| N/A   34C    P0             76W /  700W |       4MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   6  NVIDIA H200                    On  |   00000000:CB:00.0 Off |                    0 |
+| N/A   38C    P0             78W /  700W |       4MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   7  NVIDIA H200                    On  |   00000000:DB:00.0 Off |                    0 |
+| N/A   34C    P0             79W /  700W |       1MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+

@@ -1,0 +1,134 @@
+=== Job 165825 on tg11501.tamia.ecpia.ca ===
+Start: Thu Feb 26 03:07:46 PM EST 2026
+GPU 0: NVIDIA H200 (UUID: GPU-fac4cc90-7b6d-99de-0ca8-2dfd8c947225)
+GPU 1: NVIDIA H200 (UUID: GPU-e782cc90-2630-bf79-a230-1a0a298c9c6e)
+GPU 2: NVIDIA H200 (UUID: GPU-347349eb-7e00-003e-a70f-c518e7adaf34)
+GPU 3: NVIDIA H200 (UUID: GPU-4bcbd476-8fae-7a25-cdbf-5d98c921ddfc)
+GPU 4: NVIDIA H200 (UUID: GPU-54fcf6cd-7e79-56ae-e1e3-74a3a2437ef1)
+GPU 5: NVIDIA H200 (UUID: GPU-a7ceb14c-60d6-dd99-f74d-06f3c9186e87)
+GPU 6: NVIDIA H200 (UUID: GPU-394bda28-bd5b-7f02-ac53-886fdb9eff97)
+GPU 7: NVIDIA H200 (UUID: GPU-5c1d3da4-8051-1df1-5e37-05adb32ae295)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/markdown_it_py-4.0.0+computecanada-py3-none-any.whl (from rich>=12.3.0->typer>=0.24.0->typer-slim->huggingface-hub<2.0,>=0.25.0->datasets)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/pygments-2.19.2+computecanada-py3-none-any.whl (from rich>=12.3.0->typer>=0.24.0->typer-slim->huggingface-hub<2.0,>=0.25.0->datasets)
+Processing /cvmfs/soft.computecanada.ca/custom/python/wheelhouse/generic/mdurl-0.1.2+computecanada-py3-none-any.whl (from markdown-it-py>=2.2.0->rich>=12.3.0->typer>=0.24.0->typer-slim->huggingface-hub<2.0,>=0.25.0->datasets)
+Installing collected packages: mpmath, xxhash, triton, tqdm, sympy, shellingham, regex, python-dateutil, pygments, propcache, numpy, networkx, multidict, mdurl, MarkupSafe, hf-xet, h11, fsspec, frozenlist, dill, attrs, anyio, annotated-doc, aiohappyeyeballs, yarl, tiktoken, pandas, multiprocess, markdown-it-py, jinja2, httpcore, aiosignal, torch, rich, httpx, aiohttp, typer, typer-slim, huggingface-hub, datasets
+Successfully installed MarkupSafe-3.0.3+computecanada aiohappyeyeballs-2.6.1+computecanada aiohttp-3.13.3+computecanada aiosignal-1.4.0+computecanada annotated-doc-0.0.4+computecanada anyio-4.12.1+computecanada attrs-25.4.0+computecanada datasets-4.5.0+computecanada dill-0.4.0+computecanada frozenlist-1.8.0+computecanada fsspec-2025.10.0+computecanada h11-0.16.0+computecanada hf-xet-1.2.0+computecanada httpcore-1.0.9+computecanada httpx-0.28.1+computecanada huggingface-hub-1.4.1+computecanada jinja2-3.1.6+computecanada markdown-it-py-4.0.0+computecanada mdurl-0.1.2+computecanada mpmath-1.3.0+computecanada multidict-6.7.1+computecanada multiprocess-0.70.18+computecanada networkx-3.6.1+computecanada numpy-2.4.2+computecanada pandas-3.0.0+computecanada propcache-0.4.1+computecanada pygments-2.19.2+computecanada python-dateutil-2.9.0.post0+computecanada regex-2026.1.15+computecanada rich-14.3.3+computecanada shellingham-1.5.4+computecanada sympy-1.14.0+computecanada tiktoken-0.12.0+computecanada torch-2.10.0+computecanada tqdm-4.67.3+computecanada triton-3.6.0+computecanada typer-0.24.1+computecanada typer-slim-0.24.0+computecanada xxhash-3.5.0+computecanada yarl-1.22.0+computecanada
+PyTorch: 2.10.0 CUDA: True GPUs: 8
+
+=== Running MuLoCo K=1 test (default hyperparams) ===
+usage: torchrun [-h] [--nnodes NNODES] [--nproc-per-node NPROC_PER_NODE]
+                [--rdzv-backend RDZV_BACKEND] [--rdzv-endpoint RDZV_ENDPOINT]
+                [--rdzv-id RDZV_ID] [--rdzv-conf RDZV_CONF] [--standalone]
+                [--max-restarts MAX_RESTARTS]
+                [--monitor-interval MONITOR_INTERVAL]
+                [--start-method {spawn,fork,forkserver}]
+                [--event-log-handler EVENT_LOG_HANDLER] [--role ROLE] [-m]
+                [--no-python] [--run-path] [--log-dir LOG_DIR] [-r REDIRECTS]
+                [-t TEE] [--local-ranks-filter LOCAL_RANKS_FILTER]
+                [--duplicate-stdout-filters DUPLICATE_STDOUT_FILTERS]
+                [--duplicate-stderr-filters DUPLICATE_STDERR_FILTERS]
+                [--node-rank NODE_RANK] [--master-addr MASTER_ADDR]
+                [--master-port MASTER_PORT] [--local-addr LOCAL_ADDR]
+                [--logs-specs LOGS_SPECS]
+                [--numa-binding {node,socket,exclusive,core-complex}]
+                [--signals-to-handle SIGNALS_TO_HANDLE] [--virtual-local-rank]
+                training_script ...
+torchrun: error: ambiguous option: --run could match --run-path, --run_path
+
+======== GPU REPORT ========
+
+==============NVSMI LOG==============
+
+Timestamp                                 : Thu Feb 26 15:10:55 2026
+Driver Version                            : 570.211.01
+CUDA Version                              : 12.8
+
+Attached GPUs                             : 8
+GPU 00000000:19:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes                   : None
+
+GPU 00000000:3B:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes                   : None
+
+GPU 00000000:4C:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes                   : None
+
+GPU 00000000:5D:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes                   : None
+
+GPU 00000000:9B:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes                   : None
+
+GPU 00000000:BB:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes                   : None
+
+GPU 00000000:CB:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes                   : None
+
+GPU 00000000:DB:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes                   : None
+
+Thu Feb 26 15:10:55 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.211.01             Driver Version: 570.211.01     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H200                    On  |   00000000:19:00.0 Off |                    0 |
+| N/A   37C    P0             78W /  700W |       0MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA H200                    On  |   00000000:3B:00.0 Off |                    0 |
+| N/A   34C    P0             76W /  700W |       0MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA H200                    On  |   00000000:4C:00.0 Off |                    0 |
+| N/A   32C    P0             78W /  700W |       0MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA H200                    On  |   00000000:5D:00.0 Off |                    0 |
+| N/A   35C    P0             78W /  700W |       0MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   4  NVIDIA H200                    On  |   00000000:9B:00.0 Off |                    0 |
+| N/A   38C    P0             78W /  700W |       0MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   5  NVIDIA H200                    On  |   00000000:BB:00.0 Off |                    0 |
+| N/A   33C    P0             77W /  700W |       0MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   6  NVIDIA H200                    On  |   00000000:CB:00.0 Off |                    0 |
+| N/A   34C    P0             78W /  700W |       0MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   7  NVIDIA H200                    On  |   00000000:DB:00.0 Off |                    0 |
+| N/A   32C    P0             77W /  700W |       0MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+

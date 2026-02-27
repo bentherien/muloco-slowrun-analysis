@@ -1,0 +1,311 @@
+=== Job 165939 on tg10506.tamia.ecpia.ca ===
+Start: Thu Feb 26 09:51:05 PM EST 2026
+Config: epochs=15, outer_lr=0.5, outer_momentum=0.6, H=10, lr_mult=0.25, wd=1.6
+GPU 0: NVIDIA H200 (UUID: GPU-6e117e2e-1bcc-008d-be22-95fc7fca4973)
+GPU 1: NVIDIA H200 (UUID: GPU-0c04eadc-e881-b0af-ceac-83e93c37efb6)
+GPU 2: NVIDIA H200 (UUID: GPU-7d6cf488-10fa-b3fd-e14e-fe23088c2311)
+GPU 3: NVIDIA H200 (UUID: GPU-6c7eb4c6-bf5d-2d60-8079-0e1a7bc460fa)
+GPU 4: NVIDIA H200 (UUID: GPU-07c1a672-213d-9f4e-2c4d-bd4bf7256136)
+GPU 5: NVIDIA H200 (UUID: GPU-8c930f34-0490-9a2d-28c9-1feee43549e3)
+GPU 6: NVIDIA H200 (UUID: GPU-93b8b3bc-a046-3a30-ba99-35f29c303bde)
+GPU 7: NVIDIA H200 (UUID: GPU-c8dda001-5ca3-0658-e07a-9b68e3fa1e77)
+    Not uninstalling fsspec at /home/t/therien/.local/lib/python3.11/site-packages, outside environment /tmp/venv
+    Can't uninstall 'fsspec'. No files were found to uninstall.
+Successfully installed MarkupSafe-3.0.3+computecanada aiohappyeyeballs-2.6.1+computecanada aiohttp-3.13.3+computecanada aiosignal-1.4.0+computecanada attrs-25.4.0+computecanada datasets-4.5.0+computecanada dill-0.4.0+computecanada frozenlist-1.8.0+computecanada fsspec-2025.10.0+computecanada jinja2-3.1.6+computecanada mpmath-1.3.0+computecanada multidict-6.7.1+computecanada multiprocess-0.70.18+computecanada networkx-3.6.1+computecanada numpy-2.4.2+computecanada pandas-3.0.0+computecanada propcache-0.4.1+computecanada python-dateutil-2.9.0.post0+computecanada regex-2026.1.15+computecanada sympy-1.14.0+computecanada tiktoken-0.12.0+computecanada torch-2.10.0+computecanada triton-3.6.0+computecanada xxhash-3.5.0+computecanada yarl-1.22.0+computecanada
+W0226 21:52:43.299000 1932166 torch/distributed/run.py:852] 
+W0226 21:52:43.299000 1932166 torch/distributed/run.py:852] *****************************************
+W0226 21:52:43.299000 1932166 torch/distributed/run.py:852] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0226 21:52:43.299000 1932166 torch/distributed/run.py:852] *****************************************
+Using PyTorch SDPA fallback (no FA3)
+wandb: Tracking run with wandb version 0.24.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /tmp/slowrun/wandb/offline-run-20260226_220155-p6nqrs7h
+Traceback (most recent call last):
+  File "/tmp/slowrun/train_muloco.py", line 815, in <module>
+    wandb_run.log_code(".")
+  File "/home/t/therien/.local/lib/python3.11/site-packages/wandb/sdk/wandb_run.py", line 458, in wrapper_fn
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/t/therien/.local/lib/python3.11/site-packages/wandb/sdk/wandb_run.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/t/therien/.local/lib/python3.11/site-packages/wandb/sdk/wandb_run.py", line 445, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/t/therien/.local/lib/python3.11/site-packages/wandb/sdk/wandb_run.py", line 1170, in log_code
+    art.add_file(file_path, name=save_name)
+  File "/home/t/therien/.local/lib/python3.11/site-packages/wandb/sdk/artifacts/_validators.py", line 271, in wrapper
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/t/therien/.local/lib/python3.11/site-packages/wandb/sdk/artifacts/artifact.py", line 1489, in add_file
+    return self._add_local_file(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/t/therien/.local/lib/python3.11/site-packages/wandb/sdk/artifacts/artifact.py", line 1770, in _add_local_file
+    shutil.copyfile(path, staging_path)
+  File "/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/Compiler/gcccore/python/3.11.5/lib/python3.11/shutil.py", line 258, in copyfile
+    with open(dst, 'wb') as fdst:
+OSError: [Errno 122] Disk quota exceeded
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/tmp/slowrun/train_muloco.py", line 815, in <module>
+[rank0]:     wandb_run.log_code(".")
+[rank0]:   File "/home/t/therien/.local/lib/python3.11/site-packages/wandb/sdk/wandb_run.py", line 458, in wrapper_fn
+[rank0]:     return func(self, *args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/t/therien/.local/lib/python3.11/site-packages/wandb/sdk/wandb_run.py", line 400, in wrapper
+[rank0]:     return func(self, *args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/t/therien/.local/lib/python3.11/site-packages/wandb/sdk/wandb_run.py", line 445, in wrapper
+[rank0]:     return func(self, *args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/t/therien/.local/lib/python3.11/site-packages/wandb/sdk/wandb_run.py", line 1170, in log_code
+[rank0]:     art.add_file(file_path, name=save_name)
+[rank0]:   File "/home/t/therien/.local/lib/python3.11/site-packages/wandb/sdk/artifacts/_validators.py", line 271, in wrapper
+[rank0]:     return method(self, *args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/t/therien/.local/lib/python3.11/site-packages/wandb/sdk/artifacts/artifact.py", line 1489, in add_file
+[rank0]:     return self._add_local_file(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/t/therien/.local/lib/python3.11/site-packages/wandb/sdk/artifacts/artifact.py", line 1770, in _add_local_file
+[rank0]:     shutil.copyfile(path, staging_path)
+[rank0]:   File "/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/Compiler/gcccore/python/3.11.5/lib/python3.11/shutil.py", line 258, in copyfile
+[rank0]:     with open(dst, 'wb') as fdst:
+[rank0]: OSError: [Errno 122] Disk quota exceeded
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync /tmp/slowrun/wandb/offline-run-20260226_220155-p6nqrs7h[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20260226_220155-p6nqrs7h/logs[0m
+[rank0]:[W226 22:01:57.260135575 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W0226 22:01:58.769000 1932166 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 1932203 closing signal SIGTERM
+W0226 22:01:58.771000 1932166 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 1932204 closing signal SIGTERM
+W0226 22:01:58.771000 1932166 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 1932205 closing signal SIGTERM
+W0226 22:01:58.772000 1932166 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 1932206 closing signal SIGTERM
+W0226 22:01:58.772000 1932166 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 1932207 closing signal SIGTERM
+W0226 22:01:58.773000 1932166 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 1932208 closing signal SIGTERM
+W0226 22:01:58.773000 1932166 torch/distributed/elastic/multiprocessing/api.py:1010] Sending process 1932209 closing signal SIGTERM
+E0226 22:02:00.290000 1932166 torch/distributed/elastic/multiprocessing/api.py:984] failed (exitcode: 1) local_rank: 0 (pid: 1932202) of binary: /tmp/venv/bin/python
+Traceback (most recent call last):
+  File "/tmp/venv/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/tmp/venv/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 362, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/tmp/venv/lib/python3.11/site-packages/torch/distributed/run.py", line 991, in main
+    run(args)
+  File "/tmp/venv/lib/python3.11/site-packages/torch/distributed/run.py", line 982, in run
+    elastic_launch(
+  File "/tmp/venv/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 170, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/venv/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 317, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train_muloco.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-02-26_22:02:00
+  host      : tg10506.tamia.ecpia.ca
+  rank      : 1 (local_rank: 1)
+  exitcode  : -15 (pid: 1932203)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 1932203
+[2]:
+  time      : 2026-02-26_22:02:00
+  host      : tg10506.tamia.ecpia.ca
+  rank      : 2 (local_rank: 2)
+  exitcode  : -15 (pid: 1932204)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 1932204
+[3]:
+  time      : 2026-02-26_22:02:00
+  host      : tg10506.tamia.ecpia.ca
+  rank      : 3 (local_rank: 3)
+  exitcode  : -15 (pid: 1932205)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 1932205
+[4]:
+  time      : 2026-02-26_22:02:00
+  host      : tg10506.tamia.ecpia.ca
+  rank      : 4 (local_rank: 4)
+  exitcode  : -15 (pid: 1932206)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 1932206
+[5]:
+  time      : 2026-02-26_22:02:00
+  host      : tg10506.tamia.ecpia.ca
+  rank      : 5 (local_rank: 5)
+  exitcode  : -15 (pid: 1932207)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 1932207
+[6]:
+  time      : 2026-02-26_22:02:00
+  host      : tg10506.tamia.ecpia.ca
+  rank      : 6 (local_rank: 6)
+  exitcode  : -15 (pid: 1932208)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 1932208
+[7]:
+  time      : 2026-02-26_22:02:00
+  host      : tg10506.tamia.ecpia.ca
+  rank      : 7 (local_rank: 7)
+  exitcode  : -15 (pid: 1932209)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 1932209
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-02-26_22:01:58
+  host      : tg10506.tamia.ecpia.ca
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 1932202)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+
+======== GPU REPORT ========
+
+==============NVSMI LOG==============
+
+Timestamp                                 : Thu Feb 26 22:02:00 2026
+Driver Version                            : 570.211.01
+CUDA Version                              : 12.8
+
+Attached GPUs                             : 8
+GPU 00000000:19:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes
+        Process ID                        : 1932202
+            GPU Utilization               : 0 %
+            Memory Utilization            : 0 %
+            Max memory usage              : 1504 MiB
+            Time                          : 550573 ms
+            Is Running                    : 0
+
+GPU 00000000:3B:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes
+        Process ID                        : 1932203
+            GPU Utilization               : 0 %
+            Memory Utilization            : 0 %
+            Max memory usage              : 24044 MiB
+            Time                          : 551974 ms
+            Is Running                    : 0
+
+GPU 00000000:4C:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes
+        Process ID                        : 1932204
+            GPU Utilization               : 0 %
+            Memory Utilization            : 0 %
+            Max memory usage              : 24044 MiB
+            Time                          : 550956 ms
+            Is Running                    : 0
+
+GPU 00000000:5D:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes
+        Process ID                        : 1932205
+            GPU Utilization               : 0 %
+            Memory Utilization            : 0 %
+            Max memory usage              : 24044 MiB
+            Time                          : 551110 ms
+            Is Running                    : 0
+
+GPU 00000000:9B:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes
+        Process ID                        : 1932206
+            GPU Utilization               : 0 %
+            Memory Utilization            : 0 %
+            Max memory usage              : 24044 MiB
+            Time                          : 550978 ms
+            Is Running                    : 0
+
+GPU 00000000:BB:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes
+        Process ID                        : 1932207
+            GPU Utilization               : 0 %
+            Memory Utilization            : 0 %
+            Max memory usage              : 24044 MiB
+            Time                          : 551125 ms
+            Is Running                    : 0
+
+GPU 00000000:CB:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes
+        Process ID                        : 1932208
+            GPU Utilization               : 0 %
+            Memory Utilization            : 0 %
+            Max memory usage              : 24044 MiB
+            Time                          : 550809 ms
+            Is Running                    : 0
+
+GPU 00000000:DB:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes
+        Process ID                        : 1932209
+            GPU Utilization               : 0 %
+            Memory Utilization            : 0 %
+            Max memory usage              : 24044 MiB
+            Time                          : 551090 ms
+            Is Running                    : 0
+
+Thu Feb 26 22:02:01 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.211.01             Driver Version: 570.211.01     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H200                    On  |   00000000:19:00.0 Off |                    0 |
+| N/A   35C    P0             79W /  700W |       0MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA H200                    On  |   00000000:3B:00.0 Off |                    0 |
+| N/A   33C    P0            119W /  700W |       0MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA H200                    On  |   00000000:4C:00.0 Off |                    0 |
+| N/A   32C    P0            114W /  700W |       0MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA H200                    On  |   00000000:5D:00.0 Off |                    0 |
+| N/A   35C    P0            123W /  700W |       0MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   4  NVIDIA H200                    On  |   00000000:9B:00.0 Off |                    0 |
+| N/A   35C    P0             98W /  700W |       0MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   5  NVIDIA H200                    On  |   00000000:BB:00.0 Off |                    0 |
+| N/A   34C    P0            121W /  700W |       0MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   6  NVIDIA H200                    On  |   00000000:CB:00.0 Off |                    0 |
+| N/A   35C    P0            113W /  700W |       0MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   7  NVIDIA H200                    On  |   00000000:DB:00.0 Off |                    0 |
+| N/A   33C    P0            123W /  700W |       0MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
