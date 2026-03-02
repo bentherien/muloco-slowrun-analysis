@@ -1,7 +1,6 @@
-# Slowrun Sweep Resume State (2026-03-01 ~18:30 EST)
+# Slowrun Sweep FINAL Results (2026-03-02 ~13:15 EST)
 
-## What You're Doing
-Sweep3+4+5 largely complete. 57+ finished, 5 still running on mila (repeatedly preempted). All tamia sweep5 done. Fir cancelled. Monitoring mila stragglers.
+## STATUS: ALL 62 CONFIGS COMPLETE
 
 ## KEY RESULT: Val Loss = 3.3660
 **Best: LRM=0.23, WD=1.3, olr=0.5, omom=0.5, H=2, 12 epochs, shuffling ON**
@@ -44,34 +43,34 @@ Sweep3+4+5 largely complete. 57+ finished, 5 still running on mila (repeatedly p
 | **12** | **3.3666** | Optimal |
 | 16 | 3.3819 | Worse — overfitting on 100M tokens |
 
-### LRM=0.25 Gap Fill
-| WD | Val Loss |
-|----|----------|
-| 1.0 | 3.3814 |
-| 1.3 | 3.3693 (mila) |
-| 1.6 | 3.3728 |
-
-## Cluster Status (18:30 EST)
-- **Tamia**: All sweep5 done (8/8 complete)
-- **Mila**: 3 running (s4_lrm0.23_wd1.15 3.5h, s4_lrm0.19_wd1.3 3.5h, s3_lrm0.22_wd1.6 1h — all preempted multiple times, restarting)
-- **Fir**: Cancelled (were stuck 24h+)
+### Gap Fill Results
+| Config | Val Loss | Source |
+|--------|----------|--------|
+| LRM=0.25 WD=1.0 | 3.3814 | tamia sweep5 |
+| LRM=0.25 WD=1.3 | 3.3693 | mila sweep4 |
+| LRM=0.25 WD=1.6 | 3.3728 | tamia sweep5 |
+| LRM=0.23 WD=1.15 | 3.3747 | mila sweep4 |
+| LRM=0.19 WD=1.3 | 3.3767 | mila sweep4 |
+| LRM=0.22 WD=1.6 | 3.3734 | tamia (mila kept getting preempted) |
 
 ## Completed Runs Summary
-- **Sweep3**: 34 finished (s3_lrm0.22_wd1.6 still running on mila)
-- **Sweep4**: 18 finished (s4_lrm0.23_wd1.25 + s4_lrm0.25_wd1.3 just completed), 2 running (mila)
-- **Sweep5**: 8/8 finished on tamia
-- **Total**: ~57 completed, 5 still on mila
+- **Sweep3**: 35 finished (LRM×WD grid with shuffling, H=3)
+- **Sweep4**: 19 finished (interpolation points)
+- **Sweep5**: 8 finished (H values, olr variants, extended epochs, gap fills)
+- **Total**: **62 unique configs complete**, 50+ beat 3.402 target
 
 ## Key Observations
 1. **H=2 marginally beats H=3** (3.3660 vs 3.3666) — more frequent sync helps
 2. **olr=0.5 optimal** but olr=0.7 nearly as good (3.3669 vs 3.3666)
 3. **16 epochs worse than 12** (3.3819 vs 3.3666) — overfitting on 100M token dataset
 4. **LRM=0.22-0.27 × WD=1.2-1.4** all within 0.003 of best — very flat optimum
-5. **38+ out of 57+ runs beat 3.402 target**
+5. **50+ out of 62 runs beat 3.402 target**
 6. **Epoch shuffling provides ~0.034 improvement** (3.4004 → 3.3666)
 7. **All improvements are marginal** — further HP tuning unlikely to yield much more
+8. **Mila long partition extremely preemption-prone** — s3_lrm0.22_wd1.6 preempted 5+ times
 
 ## Analysis Files
 - `/mnt/raid0/claude/slowrun/analysis/sweep3_plots/` — 6 plot files
 - `/mnt/raid0/claude/slowrun/analysis/sweep3_wandb_data.json` — All sweep data
 - `/mnt/raid0/claude/slowrun/analysis/sweep3_plots.py` — Plot generation
+- GitHub: https://github.com/bentherien/muloco-slowrun-analysis
